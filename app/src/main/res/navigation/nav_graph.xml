@@ -9,5 +9,35 @@
         android:id="@+id/homeFragment"
         android:name="com.example.pokerbotapp.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_calculatorHandEntryFragment2"
+            app:destination="@id/calculatorHandEntryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_botHandEntryFragment"
+            app:destination="@id/botHandEntryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/botHandEntryFragment"
+        android:name="com.example.pokerbotapp.BotHandEntryFragment"
+        android:label="fragment_bot_hand_entry"
+        tools:layout="@layout/fragment_bot_hand_entry" >
+        <action
+            android:id="@+id/action_botHandEntryFragment_to_cardSelectionFragment"
+            app:destination="@id/cardSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculatorHandEntryFragment"
+        android:name="com.example.pokerbotapp.CalculatorHandEntryFragment"
+        android:label="fragment_calculator_hand_entry"
+        tools:layout="@layout/fragment_calculator_hand_entry" >
+        <action
+            android:id="@+id/action_calculatorHandEntryFragment_to_cardSelectionFragment"
+            app:destination="@id/cardSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardSelectionFragment"
+        android:name="com.example.pokerbotapp.CardSelectionFragment"
+        android:label="fragment_card_selection"
+        tools:layout="@layout/fragment_card_selection" />
 </navigation>
