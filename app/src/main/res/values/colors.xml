@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="playingCardRedDarker">#9A0008</color>
+    <color name="playingCardRedDark">#C30A13</color>
+    <color name="playingCardRed">#ec242e</color>
+    <color name="playingCardRedLight">#FA4E57</color>
+    <color name="playingCardRedLighter">#FC777E</color>
 </resources>

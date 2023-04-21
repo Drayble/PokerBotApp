@@ -2,5 +2,5 @@
     <string name="app_name">PokerBotApp</string>
     <string name="calculator_mode_description">With <u><b>Calculator Mode</b></u>, you play normally, entering your hand and the flop as they appear, and the calculator will give you your possible hands, your chances of getting them, and what cards are needed to make them.</string>
     <string name="decision_mode_description">With <u><b>Decision Mode</b></u>, everything\'s taken care of for you. Just enter your starting chip amount, hand, and the flop as it comes up, and the recommended bets, bluffs, or folds will be given. Also allows manual entry of bets if you choose to deviate from the recommendations.</string>
-
+    <string name="quick_app_description">This app was created by Bradley Ames and is both a calculator and &quot;bot&quot; for standard Texas Hold\'em.\nPlease use responsibly.</string>
 </resources>
