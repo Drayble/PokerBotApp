@@ -41,36 +41,48 @@
         android:id="@+id/calculator_mode_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:text="Calculator Mode"
-        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="parent"
+        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@+id/title_description_textView" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/textView2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="TextView"-->
-<!--        tools:layout_editor_absoluteX="277dp"-->
-<!--        tools:layout_editor_absoluteY="356dp" />-->
+    <TextView
+        android:id="@+id/calculator_mode_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calculator_mode_description"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/calculator_mode_button"
+        app:layout_constraintTop_toBottomOf="@+id/calculator_mode_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="16dp"
+        android:textSize="16sp"
+        android:textColor="#1f1f1f"/>
 
     <Button
         android:id="@+id/decision_mode_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="Decision Mode"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calculator_mode_button" />
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/calculator_mode_button"
+        app:layout_constraintTop_toBottomOf="@+id/calculator_mode_textView"
+        android:textSize="16sp"/>
 
-<!--    <TextView-->
-<!--        android:id="@+id/textView3"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="TextView"-->
-<!--        tools:layout_editor_absoluteX="263dp"-->
-<!--        tools:layout_editor_absoluteY="504dp" />-->
+    <TextView
+        android:id="@+id/decision_mode_description_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/decision_mode_description"
+        app:layout_constraintStart_toStartOf="@+id/decision_mode_button"
+        app:layout_constraintTop_toBottomOf="@+id/decision_mode_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="16dp"
+        android:textSize="16sp"
+        android:textColor="#1f1f1f"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
