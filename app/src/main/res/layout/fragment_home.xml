@@ -15,7 +15,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginRight="16dp"
         android:fontFamily="sans-serif-light"
-        android:text="Welcome to the Deadpan App!"
+        android:text="@string/homescreen_title"
         android:textAlignment="center"
         android:textSize="52sp"
         android:textStyle="bold"
@@ -32,7 +32,7 @@
         android:layout_marginRight="16dp"
         android:text="@string/quick_app_description"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_header_textView" />
