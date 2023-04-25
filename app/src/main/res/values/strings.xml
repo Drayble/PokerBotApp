@@ -7,4 +7,5 @@
     <string name="enter_your_hand">Please Enter Your\nStarting Hand:</string>
     <string name="chip_count_help">*If playing with chips with no monetary value, enter the # of chips</string>
     <string name="chip_count_entry_description">Enter your current chip count in $:</string>
+    <string name="continue_">Continue</string>
 </resources>
