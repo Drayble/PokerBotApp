@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_botHandEntryFragment_to_cardSelectionFragment"
             app:destination="@id/cardSelectionFragment" />
+        <action
+            android:id="@+id/action_botHandEntryFragment_to_botResultsFragment"
+            app:destination="@id/botResultsFragment" />
     </fragment>
     <fragment
         android:id="@+id/calculatorHandEntryFragment"
@@ -34,10 +37,49 @@
         <action
             android:id="@+id/action_calculatorHandEntryFragment_to_cardSelectionFragment"
             app:destination="@id/cardSelectionFragment" />
+        <action
+            android:id="@+id/action_calculatorHandEntryFragment_to_calculatorResultsFragment"
+            app:destination="@id/calculatorResultsFragment" />
     </fragment>
     <fragment
         android:id="@+id/cardSelectionFragment"
         android:name="com.example.pokerbotapp.CardSelectionFragment"
         android:label="fragment_card_selection"
         tools:layout="@layout/fragment_card_selection" />
+    <fragment
+        android:id="@+id/botFlopEntryFragment"
+        android:name="com.example.pokerbotapp.BotFlopEntryFragment"
+        android:label="fragment_bot_flop_entry"
+        tools:layout="@layout/fragment_bot_flop_entry" >
+        <action
+            android:id="@+id/action_botFlopEntryFragment_to_cardSelectionFragment"
+            app:destination="@id/cardSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/botResultsFragment"
+        android:name="com.example.pokerbotapp.BotResultsFragment"
+        android:label="fragment_bot_results"
+        tools:layout="@layout/fragment_bot_results" >
+        <action
+            android:id="@+id/action_botResultsFragment_to_botFlopEntryFragment"
+            app:destination="@id/botFlopEntryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculatorFlopEntryFragment"
+        android:name="com.example.pokerbotapp.CalculatorFlopEntryFragment"
+        android:label="fragment_calculator_flop_entry"
+        tools:layout="@layout/fragment_calculator_flop_entry" >
+        <action
+            android:id="@+id/action_calculatorFlopEntryFragment_to_cardSelectionFragment"
+            app:destination="@id/cardSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculatorResultsFragment"
+        android:name="com.example.pokerbotapp.CalculatorResultsFragment"
+        android:label="fragment_calculator_results"
+        tools:layout="@layout/fragment_calculator_results" >
+        <action
+            android:id="@+id/action_calculatorResultsFragment_to_calculatorFlopEntryFragment"
+            app:destination="@id/calculatorFlopEntryFragment" />
+    </fragment>
 </navigation>
