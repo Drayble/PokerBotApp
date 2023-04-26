@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/layout/activity_main.xml" value="0.27239583333333334" />
+        <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/layout/cardselection_row.xml" value="0.2230769230769231" />
         <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/layout/fragment_bot_flop_entry.xml" value="0.22393162393162394" />
         <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/layout/fragment_bot_hand_entry.xml" value="0.22" />
         <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/layout/fragment_bot_results.xml" value="0.22393162393162394" />
