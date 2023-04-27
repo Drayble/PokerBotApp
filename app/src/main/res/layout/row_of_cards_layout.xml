@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp">
+
+    <ImageButton
+        android:id="@+id/imgbutton1"
+        android:layout_width="77.5dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toStartOf="@id/imgbutton2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/placeholder" />
+
+    <ImageButton
+        android:id="@+id/imgbutton2"
+        android:layout_width="77.5dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toStartOf="@id/imgbutton3"
+        app:layout_constraintStart_toEndOf="@id/imgbutton1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/placeholder" />
+
+    <ImageButton
+        android:id="@+id/imgbutton3"
+        android:layout_width="77.5dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toStartOf="@id/imgbutton4"
+        app:layout_constraintStart_toEndOf="@id/imgbutton2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/placeholder" />
+
+    <ImageButton
+        android:id="@+id/imgbutton4"
+        android:layout_width="77.5dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgbutton3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/placeholder" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

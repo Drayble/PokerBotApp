@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import com.example.pokerbotapp.databinding.FragmentCalculatorHandEntryBinding
 
 
@@ -17,6 +18,15 @@ class CalculatorHandEntryFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentCalculatorHandEntryBinding.inflate(inflater, container, false)
         val rootView = binding.root
+
+        binding.cardSelectorImageButton1.setOnClickListener {
+            val action = CalculatorHandEntryFragmentDirections.actionCalculatorHandEntryFragmentToCardSelectionFragment()
+            rootView.findNavController().navigate(action)
+        }
+        binding.cardSelectorImageButton2.setOnClickListener {
+            val action = CalculatorHandEntryFragmentDirections.actionCalculatorHandEntryFragmentToCardSelectionFragment()
+            rootView.findNavController().navigate(action)
+        }
 
         return rootView
     }

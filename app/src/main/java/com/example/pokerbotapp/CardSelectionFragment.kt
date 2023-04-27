@@ -17,6 +17,24 @@ class CardSelectionFragment : Fragment() {
         _binding = FragmentCardSelectionBinding.inflate(inflater, container, false)
         val rootView = binding.root
 
+        /*Twos*/val cardRows = listOf(CardRow(R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder),
+            /*Threes*/CardRow(R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder),
+            /*Fours*/CardRow(R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder),
+            /*Fives*/CardRow(R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder),
+            /*Sixes*/CardRow(R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder),
+            /*Sevens*/CardRow(R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder),
+            /*Eights*/CardRow(R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder),
+            /*Nines*/CardRow(R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder),
+            /*Tens*/CardRow(R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder),
+            /*Jacks*/CardRow(R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder),
+            /*Queens*/CardRow(R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder),
+            /*Kings*/CardRow(R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder),
+            /*Aces*/CardRow(R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder),
+        )
+
+        val mAdapter = CardRowItemAdapter(cardRows)
+        binding.cardSelectionRecyclerView.adapter = mAdapter
+
         return rootView
     }
 }
