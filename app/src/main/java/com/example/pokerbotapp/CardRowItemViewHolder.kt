@@ -5,31 +5,27 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokerbotapp.databinding.RowOfCardsLayoutBinding
 
-class CardRowItemViewHolder(val binding: RowOfCardsLayoutBinding): RecyclerView.ViewHolder(binding.root) {
+class CardRowItemViewHolder(val binding: RowOfCardsLayoutBinding, val viewModel: CardViewModel): RecyclerView.ViewHolder(binding.root) {
     private lateinit var currentCardRow: CardRow
 
 
-
+    // I passed in the Viewmodel, now just use it to pass the value into the viewmodel and pull it after you pop
     init {
         binding.imgbutton1.setOnClickListener {
             val returnVal = currentCardRow.cardButton1.indexedValue
-            val action = CardSelectionFragmentDirections.actionCardSelectionFragmentToCalculatorHandEntryFragment(returnVal)
-            binding.root.findNavController().navigate(action)
+            binding.root.findNavController().navigateUp()
         }
         binding.imgbutton2.setOnClickListener {
             val returnVal = currentCardRow.cardButton2.indexedValue
-            val action = CardSelectionFragmentDirections.actionCardSelectionFragmentToCalculatorHandEntryFragment(returnVal)
-            binding.root.findNavController().navigate(action)
+            binding.root.findNavController().navigateUp()
         }
         binding.imgbutton3.setOnClickListener {
             val returnVal = currentCardRow.cardButton3.indexedValue
-            val action = CardSelectionFragmentDirections.actionCardSelectionFragmentToCalculatorHandEntryFragment(returnVal)
-            binding.root.findNavController().navigate(action)
+            binding.root.findNavController().navigateUp()
         }
         binding.imgbutton4.setOnClickListener {
             val returnVal = currentCardRow.cardButton4.indexedValue
-            val action = CardSelectionFragmentDirections.actionCardSelectionFragmentToCalculatorHandEntryFragment(returnVal)
-            binding.root.findNavController().navigate(action)
+            binding.root.findNavController().navigateUp()
         }
     }
 

@@ -23,8 +23,8 @@ class CalculatorHandEntryFragment : Fragment() {
         _binding = FragmentCalculatorHandEntryBinding.inflate(inflater, container, false)
         val rootView = binding.root
 
-        val args = CalculatorHandEntryFragmentArgs.fromBundle((requireArguments()))
-        binding.returnedvaluetesttextview.text = "THE RETURNED VALUE IS ${args.returnedVal}"
+
+        //binding.returnedvaluetesttextview.text = "THE RETURNED VALUE IS $returnedVal"
 
         binding.cardSelectorImageButton1.setOnClickListener {
             val action = CalculatorHandEntryFragmentDirections.actionCalculatorHandEntryFragmentToCardSelectionFragment()

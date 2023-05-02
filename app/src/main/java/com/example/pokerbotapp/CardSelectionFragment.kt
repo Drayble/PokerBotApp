@@ -36,7 +36,7 @@ class CardSelectionFragment : Fragment() {
             /*Kings*/CardRow(CardButton(i, 45), CardButton(i, 46), CardButton(i, 47), CardButton(i, 48)),
             /*Aces*/CardRow(CardButton(i, 49), CardButton(i, 50), CardButton(i, 51), CardButton(i, 52)))
 
-        val mAdapter = CardRowItemAdapter(cardButtonRows)
+        val mAdapter = CardRowItemAdapter(cardButtonRows, viewModel)
         binding.cardSelectionRecyclerView.adapter = mAdapter
 
 
