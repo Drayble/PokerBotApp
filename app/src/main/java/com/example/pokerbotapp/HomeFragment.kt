@@ -19,7 +19,7 @@ class HomeFragment : Fragment() {
         val rootView = binding.root
 
         binding.calculatorModeButton.setOnClickListener {
-            val action = HomeFragmentDirections.actionHomeFragmentToCalculatorHandEntryFragment()
+            val action = HomeFragmentDirections.actionHomeFragmentToCalculatorHandEntryFragment(0)
             rootView.findNavController().navigate(action)
         }
 

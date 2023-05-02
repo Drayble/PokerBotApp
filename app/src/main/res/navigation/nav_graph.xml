@@ -40,12 +40,28 @@
         <action
             android:id="@+id/action_calculatorHandEntryFragment_to_calculatorResultsFragment"
             app:destination="@id/calculatorResultsFragment" />
+        <argument
+            android:name="returnedVal"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/cardSelectionFragment"
         android:name="com.example.pokerbotapp.CardSelectionFragment"
         android:label="fragment_card_selection"
-        tools:layout="@layout/fragment_card_selection" />
+        tools:layout="@layout/fragment_card_selection" >
+        <action
+            android:id="@+id/action_cardSelectionFragment_to_calculatorHandEntryFragment"
+            app:destination="@id/calculatorHandEntryFragment" />
+        <action
+            android:id="@+id/action_cardSelectionFragment_to_botHandEntryFragment"
+            app:destination="@id/botHandEntryFragment" />
+        <action
+            android:id="@+id/action_cardSelectionFragment_to_calculatorFlopEntryFragment"
+            app:destination="@id/calculatorFlopEntryFragment" />
+        <action
+            android:id="@+id/action_cardSelectionFragment_to_botFlopEntryFragment"
+            app:destination="@id/botFlopEntryFragment" />
+    </fragment>
     <fragment
         android:id="@+id/botFlopEntryFragment"
         android:name="com.example.pokerbotapp.BotFlopEntryFragment"

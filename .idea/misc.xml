@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/drawable/card_item_layout.xml" value="0.2115" />
         <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2115" />
+        <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/drawable/roundcorner.xml" value="0.212" />
         <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/layout/activity_main.xml" value="0.27239583333333334" />
         <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/layout/card_layout.xml" value="0.2230769230769231" />
         <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/layout/card_layout_item.xml" value="0.2230769230769231" />
@@ -18,7 +19,7 @@
         <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/layout/fragment_card_selection.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/layout/row_layout.xml" value="0.22393162393162394" />
-        <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/layout/row_of_cards_layout.xml" value="0.2230769230769231" />
+        <entry key="..\:/Users/amesb23/AndroidStudioProjects/PokerBotApp/app/src/main/res/layout/row_of_cards_layout.xml" value="0.22393162393162394" />
       </map>
     </option>
   </component>

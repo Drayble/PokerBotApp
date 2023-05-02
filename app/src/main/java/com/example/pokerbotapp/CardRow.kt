@@ -1,4 +1,4 @@
 package com.example.pokerbotapp
 
-data class CardRow (val cardImgResourceID1: Int, val cardImgResourceID2: Int, val cardImgResourceID3: Int, val cardImgResourceID4: Int) {
+data class CardRow (val cardButton1: CardButton, val cardButton2: CardButton, val cardButton3: CardButton, val cardButton4: CardButton) {
 }
