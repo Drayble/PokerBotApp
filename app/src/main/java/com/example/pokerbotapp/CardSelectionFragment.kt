@@ -22,7 +22,7 @@ class CardSelectionFragment : Fragment() {
         val i: Int = R.drawable.placeholder
 
         val cardButtonRows = listOf(
-            /*Twos*/CardRow(CardButton(i, 1), CardButton(i, 2), CardButton(i, 3), CardButton(i, 4)),
+            /*Twos*/CardRow(CardButton(R.drawable.placeholder2, 1), CardButton(i, 2), CardButton(i, 3), CardButton(i, 4)),
             /*Threes*/CardRow(CardButton(i, 5), CardButton(i, 6), CardButton(i, 7), CardButton(i, 8)),
             /*Fours*/CardRow(CardButton(i, 9), CardButton(i, 10), CardButton(i, 11), CardButton(i, 12)),
             /*Fives*/CardRow(CardButton(i, 13), CardButton(i, 14), CardButton(i, 15), CardButton(i, 16)),

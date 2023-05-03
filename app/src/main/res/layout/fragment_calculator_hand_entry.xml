@@ -21,10 +21,10 @@
         android:textSize="32sp"/>
 
     <ImageButton
-        android:layout_marginTop="64dp"
         android:id="@+id/card_selector_imageButton1"
         android:layout_width="170.5dp"
         android:layout_height="242dp"
+        android:layout_marginTop="64dp"
         android:src="@drawable/placeholder"
         app:layout_constraintEnd_toStartOf="@+id/card_selector_imageButton2"
         app:layout_constraintHorizontal_chainStyle="spread"

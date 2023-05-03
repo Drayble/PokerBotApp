@@ -27,27 +27,25 @@ class CalculatorHandEntryFragment : Fragment() {
         val rootView = binding.root
 
         //updates card images
-        viewModel.handCardOneVal.observe(viewLifecycleOwner) { newVal ->
-            if (signpost == 0) {
-                Log.i("UPDATED CARD IMAGE", "Card one")
-                binding.cardSelectorImageButton1.setImageResource(viewModel.getImgSrc(newVal))
-            }
-        }
-        viewModel.handCardOneVal.observe(viewLifecycleOwner) { newVal ->
-            if (signpost == 1) {
-                Log.i("UPDATED CARD IMAGE", "Card two")
-                binding.cardSelectorImageButton2.setImageResource(viewModel.getImgSrc(newVal))
-            }
-        }
+        binding.cardSelectorImageButton1.setImageResource(viewModel.cardOneImgRsc)
+        binding.cardSelectorImageButton2.setImageResource(viewModel.cardTwoImgRsc)
+
+
 
         binding.cardSelectorImageButton1.setOnClickListener {
-            signpost = 0
+            viewModel.updateHandSelectToggle(false)
             val action = CalculatorHandEntryFragmentDirections.actionCalculatorHandEntryFragmentToCardSelectionFragment()
             rootView.findNavController().navigate(action)
         }
         binding.cardSelectorImageButton2.setOnClickListener {
-            signpost = 1
+            viewModel.updateHandSelectToggle(true)
             val action = CalculatorHandEntryFragmentDirections.actionCalculatorHandEntryFragmentToCardSelectionFragment()
+            rootView.findNavController().navigate(action)
+        }
+
+
+        binding.continueButton.setOnClickListener {
+            val action = CalculatorHandEntryFragmentDirections.actionCalculatorHandEntryFragmentToCalculatorResultsFragment()
             rootView.findNavController().navigate(action)
         }
 

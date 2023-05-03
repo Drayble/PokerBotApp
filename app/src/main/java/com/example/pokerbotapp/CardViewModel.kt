@@ -6,8 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class CardViewModel : ViewModel() {
-
-
     //------------------------------
     //GLOBAL VARIABLES AND FUNCTIONS
     //------------------------------
@@ -18,20 +16,43 @@ class CardViewModel : ViewModel() {
         return cardResourceList[index]
     }
 
+    //TODO: TRIPLE-CHECK THAT THIS RESETS EVERYTHING WHEN YOU'RE FINISHED
+    fun resetTheEntireViewModelForAllOfEternity() {
+        _cardOneImgRsc = R.drawable.placeholder
+        _cardTwoImgRsc = R.drawable.placeholder
+        _handSelectToggle = false
+    }
+
+
     //----------------------------
     //HAND VARIABLES AND FUNCTIONS
     //----------------------------
-    private var _handCardOneVal = MutableLiveData(0)
-    val handCardOneVal: LiveData<Int>
-        get() = _handCardOneVal
+    private var _cardOneImgRsc = R.drawable.placeholder
+    val cardOneImgRsc: Int
+        get() = _cardOneImgRsc
 
-    private var _handCardTwoVal = MutableLiveData(0)
-    val handCardTwoVal: LiveData<Int>
-        get() = _handCardTwoVal
+    private var _cardTwoImgRsc = R.drawable.placeholder
+    val cardTwoImgRsc: Int
+        get() = _cardTwoImgRsc
 
-    fun setBothCardVals(newVal: Int) {
-        _handCardOneVal.value = newVal
-        _handCardTwoVal.value = newVal
+    private var _handSelectToggle = false
+    val handSelectToggle: Boolean
+        get() = _handSelectToggle
+
+    /*
+    FALSE = Card One        TRUE = Card Two
+     */
+    fun updateHandSelectToggle(newVal: Boolean) {
+        _handSelectToggle = newVal
+    }
+
+    fun setNewHandCard(newVal: Int) {
+        if (handSelectToggle) {
+            _cardTwoImgRsc = cardResourceList[newVal]
+        }
+        else {
+            _cardOneImgRsc = cardResourceList[newVal]
+        }
     }
 
 }
