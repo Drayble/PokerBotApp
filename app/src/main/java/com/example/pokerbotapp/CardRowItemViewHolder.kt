@@ -12,19 +12,19 @@ class CardRowItemViewHolder(val binding: RowOfCardsLayoutBinding, val viewModel:
     // I passed in the Viewmodel, now just use it to pass the value into the viewmodel and pull it after you pop
     init {
         binding.imgbutton1.setOnClickListener {
-            val returnVal = currentCardRow.cardButton1.indexedValue
+            viewModel.setBothCardVals(currentCardRow.cardButton1.indexedValue)
             binding.root.findNavController().navigateUp()
         }
         binding.imgbutton2.setOnClickListener {
-            val returnVal = currentCardRow.cardButton2.indexedValue
+            viewModel.setBothCardVals(currentCardRow.cardButton2.indexedValue)
             binding.root.findNavController().navigateUp()
         }
         binding.imgbutton3.setOnClickListener {
-            val returnVal = currentCardRow.cardButton3.indexedValue
+            viewModel.setBothCardVals(currentCardRow.cardButton3.indexedValue)
             binding.root.findNavController().navigateUp()
         }
         binding.imgbutton4.setOnClickListener {
-            val returnVal = currentCardRow.cardButton4.indexedValue
+            viewModel.setBothCardVals(currentCardRow.cardButton4.indexedValue)
             binding.root.findNavController().navigateUp()
         }
     }
