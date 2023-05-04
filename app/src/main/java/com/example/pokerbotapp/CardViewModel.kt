@@ -54,5 +54,4 @@ class CardViewModel : ViewModel() {
             _cardOneImgRsc = cardResourceList[newVal]
         }
     }
-
 }

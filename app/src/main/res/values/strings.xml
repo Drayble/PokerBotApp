@@ -8,4 +8,5 @@
     <string name="chip_count_help">*If playing with chips with no monetary value, enter the # of chips</string>
     <string name="chip_count_entry_description">Enter your current chip count in $:</string>
     <string name="continue_">Continue</string>
+    <string name="player_count_entry_description">Enter the number of players\n(including yourself)</string>
 </resources>

@@ -21,10 +21,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:layout_marginTop="64dp"
         android:id="@+id/card_selector_imageButton1"
         android:layout_width="170.5dp"
         android:layout_height="242dp"
+        android:layout_marginTop="64dp"
         android:src="@drawable/placeholder"
         app:layout_constraintEnd_toStartOf="@+id/card_selector_imageButton2"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -32,10 +32,10 @@
         app:layout_constraintTop_toBottomOf="@+id/header_textView" />
 
     <ImageButton
-        android:layout_marginTop="64dp"
         android:id="@+id/card_selector_imageButton2"
         android:layout_width="170.5dp"
         android:layout_height="242dp"
+        android:layout_marginTop="64dp"
         android:src="@drawable/placeholder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/card_selector_imageButton1"
@@ -46,10 +46,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="48dp"
         android:text="@string/chip_count_entry_description"
         android:textColor="#1f1f1f"
         android:textSize="20sp"
-        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toStartOf="@id/chip_count_editText"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,7 @@
         app:layout_constraintTop_toTopOf="@id/chip_count_textView" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/chip_entry_extra_info"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -83,6 +83,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chip_count_editText" />
 
+    <TextView
+        android:id="@+id/player_count_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/player_count_entry_description"
+        android:textAlignment="center"
+        android:textColor="#1f1f1f"
+        android:textSize="20sp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toTopOf="@id/continue_button"
+        app:layout_constraintEnd_toStartOf="@id/player_count_editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chip_entry_extra_info" />
+
+    <EditText
+        android:id="@+id/player_count_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:hint="Player #"
+        android:textAlignment="center"
+        android:layout_marginLeft="8dp"
+        android:textColor="#1f1f1f"
+        android:textSize="18sp"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@id/player_count_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/player_count_textView"
+        app:layout_constraintTop_toTopOf="@id/player_count_textView" />
+
     <Button
         android:id="@+id/continue_button"
         android:layout_width="wrap_content"
@@ -93,7 +124,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/player_count_textView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
