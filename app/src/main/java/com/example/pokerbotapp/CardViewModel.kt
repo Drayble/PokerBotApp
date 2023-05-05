@@ -52,7 +52,12 @@ class CardViewModel : ViewModel() {
     fun resetTheEntireViewModelForAllOfEternity() {
         _cardOneImgRsc = R.drawable.placeholder
         _cardTwoImgRsc = R.drawable.placeholder
+        _cardOneIndex = 0
+        _cardTwoIndex = 0
         _handSelectToggle = false
+        for (i in cardIsTakenList.indices) {
+            cardIsTakenList[i] = false
+        }
     }
 
 
