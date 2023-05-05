@@ -44,6 +44,10 @@ class CardViewModel : ViewModel() {
         return cardResourceList[index]
     }
 
+    fun unflipCard(index: Int) {
+        cardIsTakenList[index] = false
+    }
+
     //TODO: TRIPLE-CHECK THAT THIS RESETS EVERYTHING WHEN YOU'RE FINISHED
     fun resetTheEntireViewModelForAllOfEternity() {
         _cardOneImgRsc = R.drawable.placeholder
@@ -59,9 +63,17 @@ class CardViewModel : ViewModel() {
     val cardOneImgRsc: Int
         get() = _cardOneImgRsc
 
+    private var _cardOneIndex = 0
+    val cardOneIndex: Int
+        get() = _cardOneIndex
+
     private var _cardTwoImgRsc = R.drawable.placeholder
     val cardTwoImgRsc: Int
         get() = _cardTwoImgRsc
+
+    private var _cardTwoIndex = 0
+    val cardTwoIndex: Int
+        get() = _cardTwoIndex
 
     private var _handSelectToggle = false
     val handSelectToggle: Boolean
@@ -77,9 +89,11 @@ class CardViewModel : ViewModel() {
     fun setNewHandCard(newVal: Int) {
         if (handSelectToggle) {
             _cardTwoImgRsc = cardResourceList[newVal]
+            _cardTwoIndex = newVal
         }
         else {
             _cardOneImgRsc = cardResourceList[newVal]
+            _cardOneIndex = newVal
         }
     }
 }

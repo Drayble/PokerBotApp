@@ -34,11 +34,13 @@ class CalculatorHandEntryFragment : Fragment() {
 
         binding.cardSelectorImageButton1.setOnClickListener {
             viewModel.updateHandSelectToggle(false)
+            viewModel.unflipCard(viewModel.cardOneIndex)
             val action = CalculatorHandEntryFragmentDirections.actionCalculatorHandEntryFragmentToCardSelectionFragment()
             rootView.findNavController().navigate(action)
         }
         binding.cardSelectorImageButton2.setOnClickListener {
             viewModel.updateHandSelectToggle(true)
+            viewModel.unflipCard(viewModel.cardTwoIndex)
             val action = CalculatorHandEntryFragmentDirections.actionCalculatorHandEntryFragmentToCardSelectionFragment()
             rootView.findNavController().navigate(action)
         }
