@@ -41,6 +41,37 @@
         app:layout_constraintStart_toEndOf="@id/card_selector_imageButton1"
         app:layout_constraintTop_toBottomOf="@+id/header_textView" />
 
+    <TextView
+        android:id="@+id/player_count_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/player_count_entry_description"
+        android:textAlignment="center"
+        android:textColor="#1f1f1f"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/continue_button"
+        app:layout_constraintEnd_toStartOf="@id/player_count_editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_selector_imageButton1" />
+
+    <EditText
+        android:id="@+id/player_count_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:hint="Player #"
+        android:textAlignment="center"
+        android:layout_marginLeft="8dp"
+        android:textColor="#1f1f1f"
+        android:textSize="18sp"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@id/player_count_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/player_count_textView"
+        app:layout_constraintTop_toTopOf="@id/player_count_textView" />
+
     <Button
         android:id="@+id/continue_button"
         android:layout_width="wrap_content"
@@ -51,6 +82,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_selector_imageButton1" />
+        app:layout_constraintTop_toBottomOf="@id/player_count_textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

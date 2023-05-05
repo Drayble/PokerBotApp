@@ -19,22 +19,32 @@ class CardSelectionFragment : Fragment() {
         _binding = FragmentCardSelectionBinding.inflate(inflater, container, false)
         val rootView = binding.root
 
-        val i: Int = R.drawable.placeholder
 
-        val cardButtonRows = listOf(
-            /*Twos*/CardRow(CardButton(R.drawable.placeholder2, 1), CardButton(i, 2), CardButton(i, 3), CardButton(i, 4)),
-            /*Threes*/CardRow(CardButton(i, 5), CardButton(i, 6), CardButton(i, 7), CardButton(i, 8)),
-            /*Fours*/CardRow(CardButton(i, 9), CardButton(i, 10), CardButton(i, 11), CardButton(i, 12)),
-            /*Fives*/CardRow(CardButton(i, 13), CardButton(i, 14), CardButton(i, 15), CardButton(i, 16)),
-            /*Sixes*/CardRow(CardButton(i, 17), CardButton(i, 18), CardButton(i, 19), CardButton(i, 20)),
-            /*Sevens*/CardRow(CardButton(i, 21), CardButton(i, 22), CardButton(i, 23), CardButton(i, 24)),
-            /*Eights*/CardRow(CardButton(i, 25), CardButton(i, 26), CardButton(i, 27), CardButton(i, 28)),
-            /*Nines*/CardRow(CardButton(i, 29), CardButton(i, 30), CardButton(i, 31), CardButton(i, 32)),
-            /*Tens*/CardRow(CardButton(i, 33), CardButton(i, 34), CardButton(i, 35), CardButton(i, 36)),
-            /*Jacks*/CardRow(CardButton(i, 37), CardButton(i, 38), CardButton(i, 39), CardButton(i, 40)),
-            /*Queens*/CardRow(CardButton(i, 41), CardButton(i, 42), CardButton(i, 43), CardButton(i, 44)),
-            /*Kings*/CardRow(CardButton(i, 45), CardButton(i, 46), CardButton(i, 47), CardButton(i, 48)),
-            /*Aces*/CardRow(CardButton(i, 49), CardButton(i, 50), CardButton(i, 51), CardButton(i, 52)))
+        val cardButtonRows = mutableListOf<CardRow>()
+
+        for (i in 1..13) {
+            var src1 = viewModel.getImgSrc(i)
+            var src2 = viewModel.getImgSrc(i+13)
+            var src3 = viewModel.getImgSrc(i+26)
+            var src4 = viewModel.getImgSrc(i+39)
+            if (viewModel.cardIsTakenList[i]) {
+                src1 = viewModel.getImgSrc(0)
+            }
+            if (viewModel.cardIsTakenList[i+13]) {
+                src2 = viewModel.getImgSrc(0)
+            }
+            if (viewModel.cardIsTakenList[i+26]) {
+                src3 = viewModel.getImgSrc(0)
+            }
+            if (viewModel.cardIsTakenList[i+39]) {
+                src4 = viewModel.getImgSrc(0)
+            }
+            cardButtonRows.add(CardRow(
+                CardButton(src1, i),
+                CardButton(src2, i + 13),
+                CardButton(src3, i + 26),
+                CardButton(src4, i + 39)))
+        }
 
         val mAdapter = CardRowItemAdapter(cardButtonRows, viewModel)
         binding.cardSelectionRecyclerView.adapter = mAdapter

@@ -9,7 +9,35 @@ class CardViewModel : ViewModel() {
     //------------------------------
     //GLOBAL VARIABLES AND FUNCTIONS
     //------------------------------
-    val cardResourceList = listOf(R.drawable.placeholder, R.drawable.placeholder2, R.drawable.placeholder)
+    val cardResourceList = listOf(/*Back of the Card*/R.drawable.placeholder2,
+        /*Aces*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        /*Twos*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        /*Threes*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        /*Fours*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        /*Fives*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        /*Sixes*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        /*Sevens*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        /*Eights*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        /*Nines*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        /*Tens*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        /*Jacks*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        /*Queens*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        /*Kings*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder)
+
+    val cardIsTakenList = mutableListOf(false,
+        false, false, false, false,
+        false, false, false, false,
+        false, false, false, false,
+        false, false, false, false,
+        false, false, false, false,
+        false, false, false, false,
+        false, false, false, false,
+        false, false, false, false,
+        false, false, false, false,
+        false, false, false, false,
+        false, false, false, false,
+        false, false, false, false,
+        false, false, false, false)
 
     fun getImgSrc(index: Int) : Int {
         Log.i("GETIMG", "INDEX IS $index")

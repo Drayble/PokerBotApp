@@ -1,6 +1,5 @@
 package com.example.pokerbotapp
 
-import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokerbotapp.databinding.RowOfCardsLayoutBinding
@@ -8,24 +7,34 @@ import com.example.pokerbotapp.databinding.RowOfCardsLayoutBinding
 class CardRowItemViewHolder(val binding: RowOfCardsLayoutBinding, val viewModel: CardViewModel): RecyclerView.ViewHolder(binding.root) {
     private lateinit var currentCardRow: CardRow
 
-
-    // I passed in the Viewmodel, now just use it to pass the value into the viewmodel and pull it after you pop
     init {
         binding.imgbutton1.setOnClickListener {
-            viewModel.setNewHandCard(currentCardRow.cardButton1.indexedValue)
-            binding.root.findNavController().navigateUp()
+            if (!(viewModel.cardIsTakenList[currentCardRow.cardButton1.indexedValue])) {
+                viewModel.setNewHandCard(currentCardRow.cardButton1.indexedValue)
+                viewModel.cardIsTakenList[currentCardRow.cardButton1.indexedValue] = true
+                binding.root.findNavController().navigateUp()
+            }
         }
         binding.imgbutton2.setOnClickListener {
-            viewModel.setNewHandCard(currentCardRow.cardButton2.indexedValue)
-            binding.root.findNavController().navigateUp()
+            if (!(viewModel.cardIsTakenList[currentCardRow.cardButton2.indexedValue])) {
+                viewModel.setNewHandCard(currentCardRow.cardButton2.indexedValue)
+                viewModel.cardIsTakenList[currentCardRow.cardButton2.indexedValue] = true
+                binding.root.findNavController().navigateUp()
+            }
         }
         binding.imgbutton3.setOnClickListener {
-            viewModel.setNewHandCard(currentCardRow.cardButton3.indexedValue)
-            binding.root.findNavController().navigateUp()
+            if (!(viewModel.cardIsTakenList[currentCardRow.cardButton3.indexedValue])) {
+                viewModel.setNewHandCard(currentCardRow.cardButton3.indexedValue)
+                viewModel.cardIsTakenList[currentCardRow.cardButton3.indexedValue] = true
+                binding.root.findNavController().navigateUp()
+            }
         }
         binding.imgbutton4.setOnClickListener {
-            viewModel.setNewHandCard(currentCardRow.cardButton4.indexedValue)
-            binding.root.findNavController().navigateUp()
+            if (!(viewModel.cardIsTakenList[currentCardRow.cardButton4.indexedValue])) {
+                viewModel.setNewHandCard(currentCardRow.cardButton4.indexedValue)
+                viewModel.cardIsTakenList[currentCardRow.cardButton4.indexedValue] = true
+                binding.root.findNavController().navigateUp()
+            }
         }
     }
 
