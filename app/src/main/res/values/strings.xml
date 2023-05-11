@@ -9,7 +9,7 @@
     <string name="chip_count_entry_description">Enter your current chip count in $:</string>
     <string name="continue_">Continue</string>
     <string name="player_count_entry_description">Enter the number of players\n(including yourself)</string>
-    <string name="flop_title">The\n     <b>Flop</b></string>
+    <string name="flop_title">The\n\u0020\u0020\u0020\u0020\u0020<b>Flop</b></string>
     <string name="calculator_results_title"><u><b>Calculator</b>\nResults</u></string>
     <string name="bot_results_title"><b>Bot</b> <u>Results</u></string>
 </resources>
