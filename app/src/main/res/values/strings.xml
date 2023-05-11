@@ -12,4 +12,5 @@
     <string name="flop_title">The\n\u0020\u0020\u0020\u0020\u0020<b>Flop</b></string>
     <string name="calculator_results_title"><u><b>Calculator</b>\nResults</u></string>
     <string name="bot_results_title"><b>Bot</b> <u>Results</u></string>
+    <string name="flop_directions">Please enter the first three cards of the flop</string>
 </resources>
