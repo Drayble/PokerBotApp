@@ -23,19 +23,19 @@ class BotHandEntryFragment : Fragment() {
         val rootView = binding.root
 
         //updates card images
-        binding.cardSelectorImageButton1.setImageResource(viewModel.cardOneImgRsc)
-        binding.cardSelectorImageButton2.setImageResource(viewModel.cardTwoImgRsc)
+        binding.cardSelectorImageButton1.setImageResource(viewModel.handCardOneImgRsc)
+        binding.cardSelectorImageButton2.setImageResource(viewModel.handCardTwoImgRsc)
 
 
         binding.cardSelectorImageButton1.setOnClickListener {
             viewModel.updateHandSelectToggle(false)
-            viewModel.unflipCard(viewModel.cardOneIndex)
+            viewModel.unflipCard(viewModel.handCardOneIndex)
             val action = BotHandEntryFragmentDirections.actionBotHandEntryFragmentToCardSelectionFragment()
             rootView.findNavController().navigate(action)
         }
         binding.cardSelectorImageButton2.setOnClickListener {
             viewModel.updateHandSelectToggle(true)
-            viewModel.unflipCard(viewModel.cardTwoIndex)
+            viewModel.unflipCard(viewModel.handCardTwoIndex)
             val action = BotHandEntryFragmentDirections.actionBotHandEntryFragmentToCardSelectionFragment()
             rootView.findNavController().navigate(action)
         }

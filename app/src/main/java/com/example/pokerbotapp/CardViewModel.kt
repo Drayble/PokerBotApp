@@ -1,8 +1,6 @@
 package com.example.pokerbotapp
 
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class CardViewModel : ViewModel() {
@@ -50,35 +48,41 @@ class CardViewModel : ViewModel() {
 
     //TODO: TRIPLE-CHECK THAT THIS RESETS EVERYTHING WHEN YOU'RE FINISHED
     fun resetTheEntireViewModelForAllOfEternity() {
-        _cardOneImgRsc = R.drawable.placeholder
-        _cardTwoImgRsc = R.drawable.placeholder
-        _cardOneIndex = 0
-        _cardTwoIndex = 0
+        _handCardOneImgRsc = R.drawable.placeholder
+        _handCardTwoImgRsc = R.drawable.placeholder
+        _handCardOneIndex = 0
+        _handCardTwoIndex = 0
         _handSelectToggle = false
         for (i in cardIsTakenList.indices) {
             cardIsTakenList[i] = false
         }
+        _flopCardOneImgRsc = R.drawable.placeholder
+        _flopCardTwoImgRsc = R.drawable.placeholder
+        _flopCardThreeImgRsc = R.drawable.placeholder
+        _flopCardFourImgRsc = R.drawable.placeholder
+        _flopCardFiveImgRsc = R.drawable.placeholder
+        _flopPass = 1
     }
 
 
     //----------------------------
     //HAND VARIABLES AND FUNCTIONS
     //----------------------------
-    private var _cardOneImgRsc = R.drawable.placeholder
-    val cardOneImgRsc: Int
-        get() = _cardOneImgRsc
+    private var _handCardOneImgRsc = R.drawable.placeholder
+    val handCardOneImgRsc: Int
+        get() = _handCardOneImgRsc
 
-    private var _cardOneIndex = 0
-    val cardOneIndex: Int
-        get() = _cardOneIndex
+    private var _handCardOneIndex = 0
+    val handCardOneIndex: Int
+        get() = _handCardOneIndex
 
-    private var _cardTwoImgRsc = R.drawable.placeholder
-    val cardTwoImgRsc: Int
-        get() = _cardTwoImgRsc
+    private var _handCardTwoImgRsc = R.drawable.placeholder
+    val handCardTwoImgRsc: Int
+        get() = _handCardTwoImgRsc
 
-    private var _cardTwoIndex = 0
-    val cardTwoIndex: Int
-        get() = _cardTwoIndex
+    private var _handCardTwoIndex = 0
+    val handCardTwoIndex: Int
+        get() = _handCardTwoIndex
 
     private var _handSelectToggle = false
     val handSelectToggle: Boolean
@@ -93,12 +97,45 @@ class CardViewModel : ViewModel() {
 
     fun setNewHandCard(newVal: Int) {
         if (handSelectToggle) {
-            _cardTwoImgRsc = cardResourceList[newVal]
-            _cardTwoIndex = newVal
+            _handCardTwoImgRsc = cardResourceList[newVal]
+            _handCardTwoIndex = newVal
         }
         else {
-            _cardOneImgRsc = cardResourceList[newVal]
-            _cardOneIndex = newVal
+            _handCardOneImgRsc = cardResourceList[newVal]
+            _handCardOneIndex = newVal
         }
+    }
+
+
+
+    //----------------------------
+    //FLOP VARIABLES AND FUNCTIONS
+    //----------------------------
+    private var _flopCardOneImgRsc = R.drawable.placeholder
+    val flopCardOneImgRsc: Int
+        get() = _flopCardOneImgRsc
+
+    private var _flopCardTwoImgRsc = R.drawable.placeholder
+    val flopCardTwoImgRsc: Int
+        get() = _flopCardTwoImgRsc
+
+    private var _flopCardThreeImgRsc = R.drawable.placeholder
+    val flopCardThreeImgRsc: Int
+        get() = _flopCardThreeImgRsc
+
+    private var _flopCardFourImgRsc = R.drawable.placeholder
+    val flopCardFourImgRsc: Int
+        get() = _flopCardFourImgRsc
+
+    private var _flopCardFiveImgRsc = R.drawable.placeholder
+    val flopCardFiveImgRsc: Int
+        get() = _flopCardFiveImgRsc
+
+    private var _flopPass = 1
+    val flopPass: Int
+        get() = _flopPass
+
+    fun updateFlopPass() {
+        _flopPass++
     }
 }

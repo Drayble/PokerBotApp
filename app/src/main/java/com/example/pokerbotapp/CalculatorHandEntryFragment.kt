@@ -1,17 +1,13 @@
 package com.example.pokerbotapp
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.setFragmentResult
-import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.findNavController
 import com.example.pokerbotapp.databinding.FragmentCalculatorHandEntryBinding
-import kotlin.math.sign
 
 
 class CalculatorHandEntryFragment : Fragment() {
@@ -26,21 +22,21 @@ class CalculatorHandEntryFragment : Fragment() {
         _binding = FragmentCalculatorHandEntryBinding.inflate(inflater, container, false)
         val rootView = binding.root
 
-        //updates card images
-        binding.cardSelectorImageButton1.setImageResource(viewModel.cardOneImgRsc)
-        binding.cardSelectorImageButton2.setImageResource(viewModel.cardTwoImgRsc)
+        //sets & updates card images
+        binding.cardSelectorImageButton1.setImageResource(viewModel.handCardOneImgRsc)
+        binding.cardSelectorImageButton2.setImageResource(viewModel.handCardTwoImgRsc)
 
 
 
         binding.cardSelectorImageButton1.setOnClickListener {
             viewModel.updateHandSelectToggle(false)
-            viewModel.unflipCard(viewModel.cardOneIndex)
+            viewModel.unflipCard(viewModel.handCardOneIndex)
             val action = CalculatorHandEntryFragmentDirections.actionCalculatorHandEntryFragmentToCardSelectionFragment()
             rootView.findNavController().navigate(action)
         }
         binding.cardSelectorImageButton2.setOnClickListener {
             viewModel.updateHandSelectToggle(true)
-            viewModel.unflipCard(viewModel.cardTwoIndex)
+            viewModel.unflipCard(viewModel.handCardTwoIndex)
             val action = CalculatorHandEntryFragmentDirections.actionCalculatorHandEntryFragmentToCardSelectionFragment()
             rootView.findNavController().navigate(action)
         }
