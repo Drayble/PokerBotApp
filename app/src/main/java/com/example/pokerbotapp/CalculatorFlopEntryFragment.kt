@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import com.example.pokerbotapp.databinding.FragmentCalculatorFlopEntryBinding
 
 
@@ -31,29 +32,44 @@ class CalculatorFlopEntryFragment : Fragment() {
         //only accessible on first pass
         binding.imgbutton1.setOnClickListener{
             if (viewModel.flopPass == 1) {
-
+                viewModel.updateFlopSelectToggle(1)
+                viewModel.unflipCard(viewModel.flopCardOneIndex)
+                val action = CalculatorFlopEntryFragmentDirections.actionCalculatorFlopEntryFragmentToCardSelectionFragment()
+                rootView.findNavController().navigate(action)
             }
         }
-        binding.imgbutton1.setOnClickListener{
+        binding.imgbutton2.setOnClickListener{
             if (viewModel.flopPass == 1) {
-
+                viewModel.updateFlopSelectToggle(2)
+                viewModel.unflipCard(viewModel.flopCardTwoIndex)
+                val action = CalculatorFlopEntryFragmentDirections.actionCalculatorFlopEntryFragmentToCardSelectionFragment()
+                rootView.findNavController().navigate(action)
             }
         }
-        binding.imgbutton1.setOnClickListener{
+        binding.imgbutton3.setOnClickListener{
             if (viewModel.flopPass == 1) {
-
+                viewModel.updateFlopSelectToggle(3)
+                viewModel.unflipCard(viewModel.flopCardThreeIndex)
+                val action = CalculatorFlopEntryFragmentDirections.actionCalculatorFlopEntryFragmentToCardSelectionFragment()
+                rootView.findNavController().navigate(action)
             }
         }
         //only accessible on second pass
-        binding.imgbutton1.setOnClickListener{
+        binding.imgbutton4.setOnClickListener{
             if (viewModel.flopPass == 2) {
-
+                viewModel.updateFlopSelectToggle(4)
+                viewModel.unflipCard(viewModel.flopCardFourIndex)
+                val action = CalculatorFlopEntryFragmentDirections.actionCalculatorFlopEntryFragmentToCardSelectionFragment()
+                rootView.findNavController().navigate(action)
             }
         }
         //only accessible on third pass
-        binding.imgbutton1.setOnClickListener{
+        binding.imgbutton5.setOnClickListener{
             if (viewModel.flopPass == 3) {
-
+                viewModel.updateFlopSelectToggle(5)
+                viewModel.unflipCard(viewModel.flopCardFiveIndex)
+                val action = CalculatorFlopEntryFragmentDirections.actionCalculatorFlopEntryFragmentToCardSelectionFragment()
+                rootView.findNavController().navigate(action)
             }
         }
 

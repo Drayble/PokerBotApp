@@ -9,30 +9,38 @@ class CardRowItemViewHolder(val binding: RowOfCardsLayoutBinding, val viewModel:
 
     init {
         binding.imgbutton1.setOnClickListener {
-            if (!(viewModel.cardIsTakenList[currentCardRow.cardButton1.indexedValue])) {
-                viewModel.setNewHandCard(currentCardRow.cardButton1.indexedValue)
-                viewModel.cardIsTakenList[currentCardRow.cardButton1.indexedValue] = true
+            val value = currentCardRow.cardButton1.indexedValue
+            if (!(viewModel.cardIsTakenList[value])) {
+                viewModel.setNewHandCard(value)
+                viewModel.setNewFlopCard(value)
+                viewModel.flipOverCard(value)
                 binding.root.findNavController().navigateUp()
             }
         }
         binding.imgbutton2.setOnClickListener {
-            if (!(viewModel.cardIsTakenList[currentCardRow.cardButton2.indexedValue])) {
-                viewModel.setNewHandCard(currentCardRow.cardButton2.indexedValue)
-                viewModel.cardIsTakenList[currentCardRow.cardButton2.indexedValue] = true
+            val value = currentCardRow.cardButton2.indexedValue
+            if (!(viewModel.cardIsTakenList[value])) {
+                viewModel.setNewHandCard(value)
+                viewModel.setNewFlopCard(value)
+                viewModel.flipOverCard(value)
                 binding.root.findNavController().navigateUp()
             }
         }
         binding.imgbutton3.setOnClickListener {
-            if (!(viewModel.cardIsTakenList[currentCardRow.cardButton3.indexedValue])) {
-                viewModel.setNewHandCard(currentCardRow.cardButton3.indexedValue)
-                viewModel.cardIsTakenList[currentCardRow.cardButton3.indexedValue] = true
+            val value = currentCardRow.cardButton3.indexedValue
+            if (!(viewModel.cardIsTakenList[value])) {
+                viewModel.setNewHandCard(value)
+                viewModel.setNewFlopCard(value)
+                viewModel.flipOverCard(value)
                 binding.root.findNavController().navigateUp()
             }
         }
         binding.imgbutton4.setOnClickListener {
-            if (!(viewModel.cardIsTakenList[currentCardRow.cardButton4.indexedValue])) {
-                viewModel.setNewHandCard(currentCardRow.cardButton4.indexedValue)
-                viewModel.cardIsTakenList[currentCardRow.cardButton4.indexedValue] = true
+            val value = currentCardRow.cardButton4.indexedValue
+            if (!(viewModel.cardIsTakenList[value])) {
+                viewModel.setNewHandCard(value)
+                viewModel.setNewFlopCard(value)
+                viewModel.flipOverCard(value)
                 binding.root.findNavController().navigateUp()
             }
         }
