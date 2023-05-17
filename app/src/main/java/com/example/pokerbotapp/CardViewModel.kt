@@ -72,6 +72,7 @@ class CardViewModel : ViewModel() {
         _flopCardFiveIndex = 0
         _flopSelectToggle = 1
         _flopPass = 1
+        _selectTypeToggle = false
     }
 
 
@@ -204,5 +205,20 @@ class CardViewModel : ViewModel() {
                 _flopCardFiveIndex = newVal
             }
         }
+    }
+
+
+
+    //----------------------------
+    //HAND SELECTION VARS
+    //----------------------------
+
+    //FALSE IS HAND, TRUE IS FLOP
+    private var _selectTypeToggle = false
+    val selectTypeToggle: Boolean
+        get() = _selectTypeToggle
+
+    fun updateSelectTypeToggle(newVal: Boolean) {
+        _selectTypeToggle = newVal
     }
 }

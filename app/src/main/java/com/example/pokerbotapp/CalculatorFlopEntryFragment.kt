@@ -32,6 +32,7 @@ class CalculatorFlopEntryFragment : Fragment() {
         //only accessible on first pass
         binding.imgbutton1.setOnClickListener{
             if (viewModel.flopPass == 1) {
+                viewModel.updateSelectTypeToggle(true)
                 viewModel.updateFlopSelectToggle(1)
                 viewModel.unflipCard(viewModel.flopCardOneIndex)
                 val action = CalculatorFlopEntryFragmentDirections.actionCalculatorFlopEntryFragmentToCardSelectionFragment()
@@ -40,6 +41,7 @@ class CalculatorFlopEntryFragment : Fragment() {
         }
         binding.imgbutton2.setOnClickListener{
             if (viewModel.flopPass == 1) {
+                viewModel.updateSelectTypeToggle(true)
                 viewModel.updateFlopSelectToggle(2)
                 viewModel.unflipCard(viewModel.flopCardTwoIndex)
                 val action = CalculatorFlopEntryFragmentDirections.actionCalculatorFlopEntryFragmentToCardSelectionFragment()
@@ -48,6 +50,7 @@ class CalculatorFlopEntryFragment : Fragment() {
         }
         binding.imgbutton3.setOnClickListener{
             if (viewModel.flopPass == 1) {
+                viewModel.updateSelectTypeToggle(true)
                 viewModel.updateFlopSelectToggle(3)
                 viewModel.unflipCard(viewModel.flopCardThreeIndex)
                 val action = CalculatorFlopEntryFragmentDirections.actionCalculatorFlopEntryFragmentToCardSelectionFragment()
@@ -57,6 +60,7 @@ class CalculatorFlopEntryFragment : Fragment() {
         //only accessible on second pass
         binding.imgbutton4.setOnClickListener{
             if (viewModel.flopPass == 2) {
+                viewModel.updateSelectTypeToggle(true)
                 viewModel.updateFlopSelectToggle(4)
                 viewModel.unflipCard(viewModel.flopCardFourIndex)
                 val action = CalculatorFlopEntryFragmentDirections.actionCalculatorFlopEntryFragmentToCardSelectionFragment()
@@ -66,6 +70,7 @@ class CalculatorFlopEntryFragment : Fragment() {
         //only accessible on third pass
         binding.imgbutton5.setOnClickListener{
             if (viewModel.flopPass == 3) {
+                viewModel.updateSelectTypeToggle(true)
                 viewModel.updateFlopSelectToggle(5)
                 viewModel.unflipCard(viewModel.flopCardFiveIndex)
                 val action = CalculatorFlopEntryFragmentDirections.actionCalculatorFlopEntryFragmentToCardSelectionFragment()
