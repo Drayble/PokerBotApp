@@ -28,12 +28,14 @@ class BotHandEntryFragment : Fragment() {
 
 
         binding.cardSelectorImageButton1.setOnClickListener {
+            viewModel.updateSelectTypeToggle(false)
             viewModel.updateHandSelectToggle(1)
             viewModel.unflipCard(viewModel.handCardOneIndex)
             val action = BotHandEntryFragmentDirections.actionBotHandEntryFragmentToCardSelectionFragment()
             rootView.findNavController().navigate(action)
         }
         binding.cardSelectorImageButton2.setOnClickListener {
+            viewModel.updateSelectTypeToggle(false)
             viewModel.updateHandSelectToggle(2)
             viewModel.unflipCard(viewModel.handCardTwoIndex)
             val action = BotHandEntryFragmentDirections.actionBotHandEntryFragmentToCardSelectionFragment()

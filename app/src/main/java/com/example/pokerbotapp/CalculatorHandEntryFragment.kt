@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.util.Log
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.example.pokerbotapp.databinding.FragmentCalculatorHandEntryBinding
@@ -27,8 +28,16 @@ class CalculatorHandEntryFragment : Fragment() {
         binding.cardSelectorImageButton2.setImageResource(viewModel.handCardTwoImgRsc)
 
 
+        /*
+        TODO: Go through all imageviews & buttons and resize them to the correct/new dimensions
+         */
+
+
+
+
+
         //TODO: DELETE THIS LINE WHEN DONE
-        Log.i("FragmentCreation (calcHandEntry)", "Indices are as followS: card1 = ${viewModel.handCardOneIndex}, card2 = ${viewModel.handCardTwoIndex}") 
+        Log.i("(calcHandEntry)", "Indices are as followS: card1 = ${viewModel.handCardOneIndex}, card2 = ${viewModel.handCardTwoIndex}")
 
         binding.cardSelectorImageButton1.setOnClickListener {
             viewModel.updateSelectTypeToggle(false)

@@ -8,45 +8,29 @@ class CardViewModel : ViewModel() {
     //GLOBAL VARIABLES AND FUNCTIONS
     //------------------------------
     val cardResourceList = listOf(/*Back of the Card*/R.drawable.flipped_card,
-        /*Aces*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-        /*Twos*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-        /*Threes*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-        /*Fours*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-        /*Fives*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-        /*Sixes*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-        /*Sevens*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-        /*Eights*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-        /*Nines*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-        /*Tens*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-        /*Jacks*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-        /*Queens*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-        /*Kings*/R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder)
+        /*       ACES                    TWOS                   THREES                   FOURS                  FIVES                   SIXES                   SEVENS                  EIGHTS                  NINES                    TENS                    JACKS                 QUEENS                   KINGS        */
+        R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+        R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder)
 
     val cardIsTakenList = mutableListOf(false,
-        false, false, false, false,
-        false, false, false, false,
-        false, false, false, false,
-        false, false, false, false,
-        false, false, false, false,
-        false, false, false, false,
-        false, false, false, false,
-        false, false, false, false,
-        false, false, false, false,
-        false, false, false, false,
-        false, false, false, false,
-        false, false, false, false,
-        false, false, false, false)
+        false, false, false, false, false, false, false, false, false, false, false, false, false,
+        false, false, false, false, false, false, false, false, false, false, false, false, false,
+        false, false, false, false, false, false, false, false, false, false, false, false, false,
+        false, false, false, false, false, false, false, false, false, false, false, false, false)
 
     fun getImgSrc(index: Int) : Int {
-        Log.i("GETIMG", "INDEX IS $index")
         return cardResourceList[index]
     }
 
     fun unflipCard(index: Int) {
+        Log.i("UNFLIP", "UNFLIP WAS CALLED ON $index")
         cardIsTakenList[index] = false
     }
 
     fun flipOverCard(index: Int) {
+        Log.i("Flipped", "FlipOver called on $index")
         cardIsTakenList[index] = true
     }
 
@@ -113,8 +97,8 @@ class CardViewModel : ViewModel() {
                 _handCardOneIndex = newVal
             }
             2 -> {
-                _handCardOneImgRsc = cardResourceList[newVal]
-                _handCardOneIndex = newVal
+                _handCardTwoImgRsc = cardResourceList[newVal]
+                _handCardTwoIndex = newVal
             }
         }
     }
