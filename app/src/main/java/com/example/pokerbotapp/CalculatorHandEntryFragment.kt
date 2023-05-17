@@ -27,6 +27,8 @@ class CalculatorHandEntryFragment : Fragment() {
         binding.cardSelectorImageButton2.setImageResource(viewModel.handCardTwoImgRsc)
 
 
+        //TODO: DELETE THIS LINE WHEN DONE
+        Log.i("FragmentCreation (calcHandEntry)", "Indices are as followS: card1 = ${viewModel.handCardOneIndex}, card2 = ${viewModel.handCardTwoIndex}") 
 
         binding.cardSelectorImageButton1.setOnClickListener {
             viewModel.updateSelectTypeToggle(false)
