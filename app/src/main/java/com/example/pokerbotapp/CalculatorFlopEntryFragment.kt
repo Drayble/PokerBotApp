@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import android.widget.Toast
 import androidx.navigation.findNavController
 import com.example.pokerbotapp.databinding.FragmentCalculatorFlopEntryBinding
 
@@ -80,7 +81,35 @@ class CalculatorFlopEntryFragment : Fragment() {
 
 
         binding.continueButton.setOnClickListener{
-            viewModel.updateFlopPass()
+            when (viewModel.flopPass) {
+                1 -> {
+                    if ((viewModel.flopCardOneIndex != 0) && (viewModel.flopCardTwoIndex != 0) && (viewModel.flopCardThreeIndex != 0)) {
+                        viewModel.updateFlopPass()
+                        rootView.findNavController().navigateUp()
+                    }
+                    else {
+                        Toast.makeText(activity, "Please input all 3 cards before moving on.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                2 -> {
+                    if (viewModel.flopCardFourIndex != 0) {
+                        viewModel.updateFlopPass()
+                        rootView.findNavController().navigateUp()
+                    }
+                    else {
+                        Toast.makeText(activity, "Please input the 4th card before moving on.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                3 -> {
+                    if (viewModel.flopCardFiveIndex != 0) {
+                        viewModel.updateFlopPass()
+                        rootView.findNavController().navigateUp()
+                    }
+                    else {
+                        Toast.makeText(activity, "Please input the last card before moving on.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
         }
 
 

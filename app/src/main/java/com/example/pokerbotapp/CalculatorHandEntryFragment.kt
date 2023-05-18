@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.util.Log
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.example.pokerbotapp.databinding.FragmentCalculatorHandEntryBinding
@@ -27,11 +28,6 @@ class CalculatorHandEntryFragment : Fragment() {
         binding.cardSelectorImageButton1.setImageResource(viewModel.handCardOneImgRsc)
         binding.cardSelectorImageButton2.setImageResource(viewModel.handCardTwoImgRsc)
 
-
-        /*
-        TODO: Go through all imageviews & buttons and resize them to the correct/new dimensions
-         */
-
         binding.cardSelectorImageButton1.setOnClickListener {
             viewModel.updateSelectTypeToggle(false)
             viewModel.updateHandSelectToggle(1)
@@ -49,8 +45,13 @@ class CalculatorHandEntryFragment : Fragment() {
 
 
         binding.continueButton.setOnClickListener {
-            val action = CalculatorHandEntryFragmentDirections.actionCalculatorHandEntryFragmentToCalculatorResultsFragment()
-            rootView.findNavController().navigate(action)
+            if ((viewModel.handCardOneIndex != 0) && (viewModel.handCardTwoIndex != 0))  {
+                val action = CalculatorHandEntryFragmentDirections.actionCalculatorHandEntryFragmentToCalculatorResultsFragment()
+                rootView.findNavController().navigate(action)
+            }
+            else {
+                Toast.makeText(activity, "Please input both cards before moving on.", Toast.LENGTH_SHORT).show()
+            }
         }
 
         return rootView

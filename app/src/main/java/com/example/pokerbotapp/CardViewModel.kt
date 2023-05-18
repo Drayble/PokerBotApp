@@ -157,6 +157,9 @@ class CardViewModel : ViewModel() {
 
     fun updateFlopPass() {
         _flopPass++
+        if (_flopPass > 3) {
+            _flopPass = 3
+        }
     }
 
     // CardNum is # 1 through 5

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.example.pokerbotapp.databinding.FragmentBotHandEntryBinding
@@ -43,8 +44,13 @@ class BotHandEntryFragment : Fragment() {
         }
 
         binding.continueButton.setOnClickListener {
-            val action = BotHandEntryFragmentDirections.actionBotHandEntryFragmentToBotResultsFragment()
-            rootView.findNavController().navigate(action)
+            if ((viewModel.handCardOneIndex != 0) && (viewModel.handCardTwoIndex != 0))  {
+                val action = BotHandEntryFragmentDirections.actionBotHandEntryFragmentToBotResultsFragment()
+                rootView.findNavController().navigate(action)
+            }
+            else {
+                Toast.makeText(activity, "Please input both cards before moving on.", Toast.LENGTH_SHORT).show()
+            }
         }
 
         return rootView

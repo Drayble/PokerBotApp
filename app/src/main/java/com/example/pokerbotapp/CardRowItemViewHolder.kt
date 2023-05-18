@@ -1,5 +1,6 @@
 package com.example.pokerbotapp
 
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokerbotapp.databinding.RowOfCardsLayoutBinding
@@ -20,6 +21,9 @@ class CardRowItemViewHolder(val binding: RowOfCardsLayoutBinding, val viewModel:
                 viewModel.flipOverCard(value)
                 binding.root.findNavController().navigateUp()
             }
+            else {
+                Toast.makeText(binding.root.context, "Sorry, that card isn't available to choose.", Toast.LENGTH_SHORT).show()
+            }
         }
         binding.imgbutton2.setOnClickListener {
             val value = currentCardRow.cardButton2.indexedValue
@@ -32,6 +36,9 @@ class CardRowItemViewHolder(val binding: RowOfCardsLayoutBinding, val viewModel:
                 }
                 viewModel.flipOverCard(value)
                 binding.root.findNavController().navigateUp()
+            }
+            else {
+                Toast.makeText(binding.root.context, "Sorry, that card isn't available to choose.", Toast.LENGTH_SHORT).show()
             }
         }
         binding.imgbutton3.setOnClickListener {
@@ -46,6 +53,9 @@ class CardRowItemViewHolder(val binding: RowOfCardsLayoutBinding, val viewModel:
                 viewModel.flipOverCard(value)
                 binding.root.findNavController().navigateUp()
             }
+            else {
+                Toast.makeText(binding.root.context, "Sorry, that card isn't available to choose.", Toast.LENGTH_SHORT).show()
+            }
         }
         binding.imgbutton4.setOnClickListener {
             val value = currentCardRow.cardButton4.indexedValue
@@ -58,6 +68,9 @@ class CardRowItemViewHolder(val binding: RowOfCardsLayoutBinding, val viewModel:
                 }
                 viewModel.flipOverCard(value)
                 binding.root.findNavController().navigateUp()
+            }
+            else {
+                Toast.makeText(binding.root.context, "Sorry, that card isn't available to choose.", Toast.LENGTH_SHORT).show()
             }
         }
     }
