@@ -37,8 +37,8 @@
 
     <ImageButton
         android:id="@+id/imgbutton1"
-        android:layout_width="108.5dp"
-        android:layout_height="140dp"
+        android:layout_width="107.1dp"
+        android:layout_height="163.35dp"
         app:layout_constraintEnd_toStartOf="@+id/imgbutton2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imgbutton2"
@@ -46,9 +46,9 @@
 
     <ImageButton
         android:id="@+id/imgbutton2"
-        android:layout_width="108.5dp"
+        android:layout_width="107.1dp"
         android:layout_marginTop="52dp"
-        android:layout_height="140dp"
+        android:layout_height="163.35dp"
         app:layout_constraintStart_toEndOf="@id/imgbutton1"
         app:layout_constraintEnd_toStartOf="@id/imgbutton3"
         app:layout_constraintTop_toBottomOf="@id/flop_directions_textView"
@@ -56,8 +56,8 @@
 
     <ImageButton
         android:id="@+id/imgbutton3"
-        android:layout_width="108.5dp"
-        android:layout_height="140dp"
+        android:layout_width="107.1dp"
+        android:layout_height="163.35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgbutton2"
         app:layout_constraintTop_toTopOf="@+id/imgbutton2"
@@ -66,8 +66,8 @@
     <ImageButton
         android:id="@+id/imgbutton4"
         android:layout_marginTop="48dp"
-        android:layout_width="108.5dp"
-        android:layout_height="140dp"
+        android:layout_width="107.1dp"
+        android:layout_height="163.35dp"
         app:layout_constraintEnd_toStartOf="@+id/imgbutton2"
         app:layout_constraintStart_toEndOf="@+id/imgbutton1"
         app:layout_constraintTop_toBottomOf="@+id/imgbutton2"
@@ -75,9 +75,9 @@
 
     <ImageButton
         android:id="@+id/imgbutton5"
-        android:layout_width="108.5dp"
+        android:layout_width="107.1dp"
         android:layout_marginTop="48dp"
-        android:layout_height="140dp"
+        android:layout_height="163.35dp"
         app:layout_constraintEnd_toStartOf="@+id/imgbutton3"
         app:layout_constraintStart_toEndOf="@+id/imgbutton2"
         app:layout_constraintTop_toBottomOf="@+id/imgbutton2"
