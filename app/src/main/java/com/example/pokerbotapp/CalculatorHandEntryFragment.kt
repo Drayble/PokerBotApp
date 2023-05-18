@@ -32,13 +32,6 @@ class CalculatorHandEntryFragment : Fragment() {
         TODO: Go through all imageviews & buttons and resize them to the correct/new dimensions
          */
 
-
-
-
-
-        //TODO: DELETE THIS LINE WHEN DONE
-        Log.i("(calcHandEntry)", "Indices are as followS: card1 = ${viewModel.handCardOneIndex}, card2 = ${viewModel.handCardTwoIndex}")
-
         binding.cardSelectorImageButton1.setOnClickListener {
             viewModel.updateSelectTypeToggle(false)
             viewModel.updateHandSelectToggle(1)

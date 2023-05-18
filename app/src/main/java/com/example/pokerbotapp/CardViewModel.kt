@@ -25,12 +25,10 @@ class CardViewModel : ViewModel() {
     }
 
     fun unflipCard(index: Int) {
-        Log.i("UNFLIP", "UNFLIP WAS CALLED ON $index")
         cardIsTakenList[index] = false
     }
 
     fun flipOverCard(index: Int) {
-        Log.i("Flipped", "FlipOver called on $index")
         cardIsTakenList[index] = true
     }
 
