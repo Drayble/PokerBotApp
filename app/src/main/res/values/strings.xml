@@ -13,4 +13,8 @@
     <string name="calculator_results_title"><u><b>Calculator</b>\nResults</u></string>
     <string name="bot_results_title"><b>Bot</b> <u>Results</u></string>
     <string name="flop_directions">Please enter the first three cards of the flop</string>
+    <string name="failed_player_snackbar">Please enter a player count higher than 0</string>
+    <string name="no_player_snackbar">Please enter a player count</string>
+    <string name="failed_chip_snackbar">Please enter a chip count higher than 0</string>
+    <string name="no_chip_snackbar">Please enter a chip count</string>
 </resources>

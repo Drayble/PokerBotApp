@@ -1,6 +1,7 @@
 package com.example.pokerbotapp
 
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.example.pokerbotapp.databinding.FragmentBotHandEntryBinding
-
+import com.google.android.material.snackbar.Snackbar
 
 
 class BotHandEntryFragment : Fragment() {
@@ -27,7 +28,6 @@ class BotHandEntryFragment : Fragment() {
         binding.cardSelectorImageButton1.setImageResource(viewModel.handCardOneImgRsc)
         binding.cardSelectorImageButton2.setImageResource(viewModel.handCardTwoImgRsc)
 
-
         binding.cardSelectorImageButton1.setOnClickListener {
             viewModel.updateSelectTypeToggle(false)
             viewModel.updateHandSelectToggle(1)
@@ -44,12 +44,36 @@ class BotHandEntryFragment : Fragment() {
         }
 
         binding.continueButton.setOnClickListener {
-            if ((viewModel.handCardOneIndex != 0) && (viewModel.handCardTwoIndex != 0))  {
-                val action = BotHandEntryFragmentDirections.actionBotHandEntryFragmentToBotResultsFragment()
-                rootView.findNavController().navigate(action)
+            if (!(TextUtils.isEmpty(binding.chipCountEditText.text.toString()))) {
+                val numChips = (binding.chipCountEditText.text).toString().toInt()
+                if (numChips > 0) {
+                    if (!(TextUtils.isEmpty(binding.playerCountEditText.text.toString()))) {
+                        val numPlayers = (binding.playerCountEditText.text).toString().toInt()
+                        if (numPlayers > 0) {
+                            if ((viewModel.handCardOneIndex != 0) && (viewModel.handCardTwoIndex != 0))  {
+                                viewModel.setChipCount(numChips)
+                                viewModel.setPlayerCount(numPlayers)
+                                val action = BotHandEntryFragmentDirections.actionBotHandEntryFragmentToBotResultsFragment()
+                                rootView.findNavController().navigate(action)
+                            }
+                            else {
+                                Toast.makeText(activity, "Please input both cards before moving on.", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                        else {
+                            Snackbar.make(rootView, R.string.failed_player_snackbar, Snackbar.LENGTH_SHORT).show()
+                        }
+                    }
+                    else {
+                        Snackbar.make(rootView, R.string.no_player_snackbar, Snackbar.LENGTH_SHORT).show()
+                    }
+                }
+                else {
+                    Snackbar.make(rootView, R.string.failed_chip_snackbar, Snackbar.LENGTH_SHORT).show()
+                }
             }
             else {
-                Toast.makeText(activity, "Please input both cards before moving on.", Toast.LENGTH_SHORT).show()
+                Snackbar.make(rootView, R.string.no_chip_snackbar, Snackbar.LENGTH_SHORT).show()
             }
         }
 

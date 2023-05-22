@@ -20,6 +20,24 @@ class CardViewModel : ViewModel() {
         false, false, false, false, false, false, false, false, false, false, false, false, false,
         false, false, false, false, false, false, false, false, false, false, false, false, false)
 
+    private var _chipCount = 0
+    val chipCount: Int
+        get() = _chipCount
+
+    private var _playerCount = 0
+    val playerCount: Int
+        get() = _playerCount
+
+    fun setChipCount(newVal: Int) {
+        _chipCount = newVal
+        Log.i("CHIP", "ChipCount is now $_chipCount")
+    }
+
+    fun setPlayerCount(newVal: Int) {
+        _playerCount = newVal
+        Log.i("PLAYER", "PlayerCount is now $_playerCount")
+    }
+
     fun getImgSrc(index: Int) : Int {
         return cardResourceList[index]
     }
@@ -55,6 +73,8 @@ class CardViewModel : ViewModel() {
         _flopSelectToggle = 1
         _flopPass = 1
         _selectTypeToggle = false
+        _chipCount = 0
+        _playerCount = 0
     }
 
 
