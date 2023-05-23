@@ -22,6 +22,9 @@ class CalculatorResultsFragment : Fragment() {
         _binding = FragmentCalculatorResultsBinding.inflate(inflater, container, false)
         val rootView = binding.root
 
+        binding.card1.setImageResource(viewModel.handCardOneImgRsc)
+        binding.card2.setImageResource(viewModel.handCardTwoImgRsc)
+
         binding.continueButton.setOnClickListener {
             val action = CalculatorResultsFragmentDirections.actionCalculatorResultsFragmentToCalculatorFlopEntryFragment()
             rootView.findNavController().navigate(action)

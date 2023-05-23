@@ -22,6 +22,9 @@ class BotResultsFragment : Fragment() {
         _binding = FragmentBotResultsBinding.inflate(inflater, container, false)
         val rootView = binding.root
 
+        binding.card1.setImageResource(viewModel.handCardOneImgRsc)
+        binding.card2.setImageResource(viewModel.handCardTwoImgRsc)
+
         binding.continueButton.setOnClickListener {
             val action = BotResultsFragmentDirections.actionBotResultsFragmentToBotFlopEntryFragment()
             rootView.findNavController().navigate(action)

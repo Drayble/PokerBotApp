@@ -17,4 +17,6 @@
     <string name="no_player_snackbar">Please enter a player count</string>
     <string name="failed_chip_snackbar">Please enter a chip count higher than 0</string>
     <string name="no_chip_snackbar">Please enter a chip count</string>
+    <string name="best_hand_title">This is your current best hand</string>
+    <string name="best_hand_desc">You have a:\u0020</string>
 </resources>
