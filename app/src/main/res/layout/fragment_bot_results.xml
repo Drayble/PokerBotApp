@@ -40,7 +40,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/card2"
         app:layout_constraintEnd_toStartOf="@id/card2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/card2" />
+        app:layout_constraintTop_toTopOf="@+id/card2"
+        android:scaleType="centerCrop"
+        android:padding="0dp"/>
 
     <ImageView
         android:id="@+id/card2"
@@ -50,7 +52,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/card3"
         app:layout_constraintEnd_toStartOf="@id/card3"
         app:layout_constraintStart_toEndOf="@id/card1"
-        app:layout_constraintTop_toTopOf="@+id/card3" />
+        app:layout_constraintTop_toTopOf="@+id/card3"
+        android:scaleType="centerCrop"
+        android:padding="0dp"/>
 
     <ImageView
         android:id="@+id/card3"
@@ -60,7 +64,9 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toStartOf="@id/card4"
         app:layout_constraintStart_toEndOf="@id/card2"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:scaleType="centerCrop"
+        android:padding="0dp"/>
 
     <ImageView
         android:id="@+id/card4"
@@ -70,7 +76,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/card3"
         app:layout_constraintEnd_toStartOf="@id/card5"
         app:layout_constraintStart_toEndOf="@id/card3"
-        app:layout_constraintTop_toTopOf="@+id/card3" />
+        app:layout_constraintTop_toTopOf="@+id/card3"
+        android:scaleType="centerCrop"
+        android:padding="0dp"/>
 
     <ImageView
         android:id="@+id/card5"
@@ -80,7 +88,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/card4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/card4"
-        app:layout_constraintTop_toTopOf="@+id/card4" />
+        app:layout_constraintTop_toTopOf="@+id/card4"
+        android:scaleType="centerCrop"
+        android:padding="0dp"/>
 
     <TextView
         android:layout_width="wrap_content"
