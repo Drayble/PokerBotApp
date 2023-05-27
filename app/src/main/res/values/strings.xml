@@ -12,7 +12,9 @@
     <string name="flop_title">The\n\u0020\u0020\u0020\u0020\u0020<b>Flop</b></string>
     <string name="calculator_results_title"><u><b>Calculator</b>\nResults</u></string>
     <string name="bot_results_title"><b>Bot</b> <u>Results</u></string>
-    <string name="flop_directions">Please enter the first three cards of the flop</string>
+    <string name="flop_directions1">Please enter the first three cards of the flop</string>
+    <string name="flop_directions2">Please enter the 4th card of the flop</string>
+    <string name="flop_directions3">Please enter the 5th card of the flop</string>
     <string name="failed_player_snackbar">Please enter a player count higher than 0</string>
     <string name="no_player_snackbar">Please enter a player count</string>
     <string name="failed_chip_snackbar">Please enter a chip count higher than 0</string>

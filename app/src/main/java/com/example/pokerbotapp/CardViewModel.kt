@@ -9,10 +9,10 @@ class CardViewModel : ViewModel() {
     //------------------------------
     val cardResourceList = listOf(/*Back of the Card*/R.drawable.flipped_card,
            /*       ACES                    TWOS                   THREES                   FOURS                  FIVES                   SIXES                   SEVENS                  EIGHTS                  NINES                    TENS                    JACKS                 QUEENS                   KINGS        */
-/* Spades */ R.drawable.placeholder, R.drawable.two_spades, R.drawable.placeholder, R.drawable.four_spades, R.drawable.five_spades, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-/* Hearts */ R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.four_hearts, R.drawable.five_hearts, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-/* Clubs  */ R.drawable.placeholder, R.drawable.two_clubs, R.drawable.three_clubs, R.drawable.four_clubs, R.drawable.five_clubs, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
-/*Diamonds*/ R.drawable.placeholder, R.drawable.two_diamonds, R.drawable.three_diamonds, R.drawable.four_diamonds, R.drawable.five_diamonds, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder)
+/* Spades */ R.drawable.ace_spades, R.drawable.two_spades, R.drawable.three_spades, R.drawable.four_spades, R.drawable.five_spades, R.drawable.six_spades, R.drawable.seven_spades, R.drawable.eight_spades, R.drawable.nine_spades, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+/* Hearts */ R.drawable.placeholder, R.drawable.two_hearts, R.drawable.three_hearts, R.drawable.four_hearts, R.drawable.five_hearts, R.drawable.six_hearts, R.drawable.seven_hearts, R.drawable.eight_hearts, R.drawable.nine_hearts, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+/* Clubs  */ R.drawable.placeholder, R.drawable.two_clubs, R.drawable.three_clubs, R.drawable.four_clubs, R.drawable.five_clubs, R.drawable.six_clubs, R.drawable.seven_clubs, R.drawable.eight_clubs, R.drawable.nine_clubs, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder,
+/*Diamonds*/ R.drawable.placeholder, R.drawable.two_diamonds, R.drawable.three_diamonds, R.drawable.four_diamonds, R.drawable.five_diamonds, R.drawable.six_diamonds, R.drawable.seven_diamonds, R.drawable.eight_diamonds, R.drawable.nine_diamonds, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder)
 
     val cardIsTakenList = mutableListOf(false,
         false, false, false, false, false, false, false, false, false, false, false, false, false,
@@ -215,7 +215,7 @@ class CardViewModel : ViewModel() {
 
 
     //----------------------------
-    //HAND SELECTION VARS
+    //CARD SELECTION VARS
     //----------------------------
 
     //FALSE IS HAND, TRUE IS FLOP
