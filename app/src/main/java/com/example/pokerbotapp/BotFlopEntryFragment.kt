@@ -30,6 +30,21 @@ class BotFlopEntryFragment : Fragment() {
         binding.imgbutton4.setImageResource(viewModel.flopCardFourImgRsc)
         binding.imgbutton5.setImageResource(viewModel.flopCardFiveImgRsc)
 
+        when (viewModel.flopPass) {
+            1 -> {
+                binding.flopDirectionsTextView.text = getString(R.string.flop_directions1)
+            }
+            2 -> {
+                binding.flopDirectionsTextView.text = getString(R.string.flop_directions2)
+            }
+            3 -> {
+                binding.flopDirectionsTextView.text = getString(R.string.flop_directions3)
+            }
+            else -> {
+                binding.flopDirectionsTextView.text = getString(R.string.flop_directions1)
+            }
+        }
+
         //only accessible on first pass
         binding.imgbutton1.setOnClickListener{
             if (viewModel.flopPass == 1) {
