@@ -7,11 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="playingCardRedDarker">#9A0008</color>
-    <color name="playingCardRedDark">#C30A13</color>
-    <color name="playingCardRed">#ec242e</color>
-    <color name="playingCardRedLight">#FA4E57</color>
-    <color name="playingCardRedLighter">#FC777E</color>
-    <color name="table_green">#207d40
+    <color name="playingCardRedDarker">#92090D</color>
+    <color name="playingCardRedDark">#B72024</color>
+    <color name="playingCardRed">#D64044</color>
+    <color name="playingCardRedLight">#F3686C</color>
+    <color name="playingCardRedLighter">#FD979A</color>
+    <color name="table_green">#207d3f
     </color>
 </resources>
