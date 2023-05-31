@@ -83,4 +83,9 @@
             android:id="@+id/action_calculatorResultsFragment_to_calculatorFlopEntryFragment"
             app:destination="@id/calculatorFlopEntryFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.pokerbotapp.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
 </navigation>
