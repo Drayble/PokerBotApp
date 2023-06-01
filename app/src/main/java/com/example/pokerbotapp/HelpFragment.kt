@@ -1,5 +1,8 @@
 package com.example.pokerbotapp
 
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,8 +20,31 @@ class HelpFragment : Fragment() {
         _binding = FragmentHelpBinding.inflate(inflater, container, false)
         val rootView = binding.root
 
+
+
+        binding.pokerHandsWebsiteButton.setOnClickListener {
+            openWebPage("https://en.wikipedia.org/wiki/List_of_poker_hands")
+        }
+
+        binding.gamblingHotlineButton.setOnClickListener {
+            dialPhoneNumber("18004262537")
+        }
+
         return rootView
     }
 
+
+    fun openWebPage(url: String) {
+        val webpage: Uri = Uri.parse(url)
+        val intent = Intent(Intent.ACTION_VIEW, webpage)
+        activity?.startActivity(intent);
+    }
+
+    fun dialPhoneNumber(phoneNumber: String) {
+        val intent = Intent(Intent.ACTION_DIAL).apply {
+            data = Uri.parse("tel:$phoneNumber")
+        }
+        activity?.startActivity(intent);
+    }
 
 }
