@@ -6,19 +6,7 @@ HELP AT THE TOP OF THE PAGE:
 https://kotlinlang.org/docs/nested-classes.html
  */
 
-class Card(
-    val num: Int,
-    val suit: String = when (num) {
-        in 1..13 -> "beans"
-        in 14..26 -> "beans"
-        in 27..39 -> "beans"
-        in 40..52 -> "beans"
-        else -> "Invalid num was entered when creating the card"
-    },
-    val numericValue: Int = num,
-    val chenVal: Double = LogicSystem.CardCreationMethods().createChenVal()
-    ) {
-    /*
+/*
     EXAMPLE OF VARIABLE NOT SET BY PARAMETER
 
     val status: String
@@ -30,8 +18,36 @@ class Card(
                 "New Snap"
             }
      */
-//    private var chenVal: Double? = 0.0
-//    //NOTICE: THIS STRING IS FOR PRINTING ONLY
-//    private var cardNumLetValue: String? = "No cardNumLetValue Set"
+
+class Card(val creationNum: Int, val cardImgRsc: Int) {
+    val getCardImgRsc: Int
+        get() = cardImgRsc
+
+    val suit: String
+        get() = when (creationNum) {
+            in 1..13 -> "Spades"
+            in 14..26 -> "Hearts"
+            in 27..39 -> "Clubs"
+            in 40..52 -> "Diamonds"
+            else -> "(suit var) Invalid num was entered when creating the card"
+        }
+
+    val numericValue: Int
+        get() = LogicSystem.CardCreationMethods().createNumericValue(creationNum)
+
+    val chenVal: Double
+        get() = LogicSystem.CardCreationMethods().createChenVal(numericValue)
+
+    val cardNumLetVal: String
+        get() = when (numericValue) {
+        1 -> "Ace"
+        in 2..10 -> "" + numericValue + ""
+        11 -> "Jack"
+        12 -> "Queen"
+        13 -> "King"
+        else -> "(cardNumLetVal var) Invalid numericValue was entered when creating the card"
+    }
+
+
 
 }

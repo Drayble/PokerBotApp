@@ -22,14 +22,26 @@ class BotResultsFragment : Fragment() {
         _binding = FragmentBotResultsBinding.inflate(inflater, container, false)
         val rootView = binding.root
 
+        if (viewModel.flopPass <= 3) {
+            binding.continueButton.text = resources.getString(R.string.continue_)
+        }
+        else {
+            binding.continueButton.text = resources.getString(R.string.restart_)
+        }
+
         binding.card1.setImageResource(viewModel.handCardOneImgRsc)
         binding.card2.setImageResource(viewModel.handCardTwoImgRsc)
 
         binding.continueButton.setOnClickListener {
-            val action = BotResultsFragmentDirections.actionBotResultsFragmentToBotFlopEntryFragment()
-            rootView.findNavController().navigate(action)
+            if (viewModel.flopPass <= 3) {
+                val action = BotResultsFragmentDirections.actionBotResultsFragmentToBotFlopEntryFragment()
+                rootView.findNavController().navigate(action)
+            }
+            else {
+                rootView.findNavController().navigateUp()
+                rootView.findNavController().navigateUp()
+            }
         }
-
         return rootView
     }
 }

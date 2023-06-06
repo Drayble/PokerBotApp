@@ -21,6 +21,7 @@
     <string name="no_chip_snackbar">Please enter a chip count</string>
     <string name="best_hand_title">This is your current best hand</string>
     <string name="best_hand_desc">You have a:\u0020</string>
+    <string name="restart_">Restart?</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
