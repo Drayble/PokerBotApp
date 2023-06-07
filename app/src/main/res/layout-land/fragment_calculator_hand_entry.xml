@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calculator_hand_entry_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorHandEntryFragment">
+
+    <TextView
+        android:id="@+id/header_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/enter_your_hand"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/card_selector_imageButton1"
+        android:layout_width="178.5dp"
+        android:layout_height="272.25dp"
+        android:padding="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_selector_imageButton2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/header_textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/card_selector_imageButton2"
+        android:layout_width="178.5dp"
+        android:layout_height="272.25dp"
+        android:padding="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/card_selector_imageButton1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player_count_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/player_count_entry_description"
+        android:textAlignment="center"
+        android:textColor="#1f1f1f"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/player_count_editText"
+        app:layout_constraintEnd_toEndOf="@+id/header_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_textView" />
+
+    <EditText
+        android:id="@+id/player_count_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:hint="Player #"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="#1f1f1f"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/continue_button"
+        app:layout_constraintEnd_toEndOf="@id/player_count_textView"
+        app:layout_constraintStart_toStartOf="@id/player_count_textView"
+        app:layout_constraintTop_toBottomOf="@+id/player_count_textView" />
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="@string/continue_"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/player_count_editText"
+        app:layout_constraintStart_toStartOf="@+id/player_count_editText"
+        app:layout_constraintTop_toBottomOf="@+id/player_count_editText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
