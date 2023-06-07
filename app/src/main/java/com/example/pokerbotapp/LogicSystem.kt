@@ -165,10 +165,10 @@ class LogicSystem {
                 while (masterIndex < inputList.size) {
                     val tempCardHolder = inputList[masterIndex]
                     var index = 0
-                    while ((index < (returnList.size - 1)) && (tempCardHolder.numericSortValue <= returnList[index].numericSortValue)) {
+                    while ((index < (returnList.size)) && (tempCardHolder.numericSortValue <= returnList[index].numericSortValue)) {
                         index++
                     }
-                    if (index < (returnList.size - 1)) {
+                    if (index < (returnList.size)) {
                         returnList.add(index, tempCardHolder)
                     }
                     else {
