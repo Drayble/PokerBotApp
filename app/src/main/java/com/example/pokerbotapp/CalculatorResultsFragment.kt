@@ -45,28 +45,43 @@ class CalculatorResultsFragment : Fragment() {
 
         //just the starting hand
         if (viewModel.flopPass == 1) {
-            binding.card1.setImageResource(viewModel.handCardOneImgRsc)
-            binding.card2.setImageResource(viewModel.handCardTwoImgRsc)
-            Log.i("CALCRESULTS", "${playerHand[0].chenVal}")
-            Log.i("CALCRESULTS", "${playerHand[1].chenVal}")
+            binding.card1.setImageResource(playerHand[0].cardImgRsc)
+            binding.card2.setImageResource(playerHand[1].cardImgRsc)
             binding.resultsDescriptionTextView.text = "Your starting hand is a " + LogicSystem.HandMethods.StartingHandMethods().
             getStartingHandChenVal(playerHand[0], playerHand[1]) + " based on the Chen Formula. (The average score is a 4.4852. Use that information however you like)"
         }
         // starting hand  + first 3 flop
         else if (viewModel.flopPass == 2) {
-            binding.card1.setImageResource(viewModel.handCardOneImgRsc)
-            binding.card2.setImageResource(viewModel.handCardTwoImgRsc)
-            binding.card3.setImageResource(viewModel.flopCardOneImgRsc)
-            binding.card4.setImageResource(viewModel.flopCardTwoImgRsc)
-            binding.card5.setImageResource(viewModel.flopCardThreeImgRsc)
+            val inputList = listOf(playerHand[0], playerHand[1], playerHand[2], playerHand[3], playerHand[4])
+            val printList: ArrayList<Card> = LogicSystem.GlobalMethods().getBestHand(inputList)
+            binding.card1.setImageResource(printList[0].cardImgRsc)
+            binding.card2.setImageResource(printList[1].cardImgRsc)
+            binding.card3.setImageResource(printList[2].cardImgRsc)
+            binding.card4.setImageResource(printList[3].cardImgRsc)
+            binding.card5.setImageResource(printList[4].cardImgRsc)
+            binding.resultsDescriptionTextView.text = LogicSystem.GlobalMethods().getDescriptionStatement(inputList)
         }
         //first sort function (6 cards)
         else if (viewModel.flopPass == 3) {
-
+            val inputList = listOf(playerHand[0], playerHand[1], playerHand[2], playerHand[3], playerHand[4], playerHand[5])
+            val printList: ArrayList<Card> = LogicSystem.GlobalMethods().getBestHand(inputList)
+            binding.card1.setImageResource(printList[0].cardImgRsc)
+            binding.card2.setImageResource(printList[1].cardImgRsc)
+            binding.card3.setImageResource(printList[2].cardImgRsc)
+            binding.card4.setImageResource(printList[3].cardImgRsc)
+            binding.card5.setImageResource(printList[4].cardImgRsc)
+            binding.resultsDescriptionTextView.text = LogicSystem.GlobalMethods().getDescriptionStatement(inputList)
         }
         //2nd sort function (7 cards)
         else {
-
+            val inputList = listOf(playerHand[0], playerHand[1], playerHand[2], playerHand[3], playerHand[4], playerHand[5], playerHand[6])
+            val printList: ArrayList<Card> = LogicSystem.GlobalMethods().getBestHand(inputList)
+            binding.card1.setImageResource(printList[0].cardImgRsc)
+            binding.card2.setImageResource(printList[1].cardImgRsc)
+            binding.card3.setImageResource(printList[2].cardImgRsc)
+            binding.card4.setImageResource(printList[3].cardImgRsc)
+            binding.card5.setImageResource(printList[4].cardImgRsc)
+            binding.resultsDescriptionTextView.text = LogicSystem.GlobalMethods().getDescriptionStatement(inputList)
         }
 
 

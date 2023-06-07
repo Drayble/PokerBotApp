@@ -48,6 +48,12 @@ class Card(val creationNum: Int, val cardImgRsc: Int) {
         else -> "(cardNumLetVal var) Invalid numericValue was entered when creating the card"
     }
 
+    val numericSortValue: Int
+        get() = if (numericValue != 1) {
+                    numericValue
+                } else {
+                    14
+                }
 
 
 }
