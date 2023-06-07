@@ -2,13 +2,12 @@ package com.example.pokerbotapp
 
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.pokerbotapp.databinding.FragmentBotHandEntryBinding
 import com.google.android.material.snackbar.Snackbar
 
@@ -76,7 +75,16 @@ class BotHandEntryFragment : Fragment() {
                 Snackbar.make(rootView, R.string.no_chip_snackbar, Snackbar.LENGTH_SHORT).show()
             }
         }
+        setHasOptionsMenu(true)
 
         return rootView
+    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.options_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
     }
 }

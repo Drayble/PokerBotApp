@@ -12,10 +12,18 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_calculatorHandEntryFragment"
-            app:destination="@id/calculatorHandEntryFragment" />
+            app:destination="@id/calculatorHandEntryFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
         <action
             android:id="@+id/action_homeFragment_to_botHandEntryFragment"
-            app:destination="@id/botHandEntryFragment" />
+            app:destination="@id/botHandEntryFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/botHandEntryFragment"
@@ -24,10 +32,18 @@
         tools:layout="@layout/fragment_bot_hand_entry" >
         <action
             android:id="@+id/action_botHandEntryFragment_to_cardSelectionFragment"
-            app:destination="@id/cardSelectionFragment" />
+            app:destination="@id/cardSelectionFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
         <action
             android:id="@+id/action_botHandEntryFragment_to_botResultsFragment"
-            app:destination="@id/botResultsFragment" />
+            app:destination="@id/botResultsFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/calculatorHandEntryFragment"
@@ -36,10 +52,18 @@
         tools:layout="@layout/fragment_calculator_hand_entry" >
         <action
             android:id="@+id/action_calculatorHandEntryFragment_to_cardSelectionFragment"
-            app:destination="@id/cardSelectionFragment" />
+            app:destination="@id/cardSelectionFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
         <action
             android:id="@+id/action_calculatorHandEntryFragment_to_calculatorResultsFragment"
-            app:destination="@id/calculatorResultsFragment" />
+            app:destination="@id/calculatorResultsFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/cardSelectionFragment"
@@ -54,7 +78,11 @@
         tools:layout="@layout/fragment_bot_flop_entry" >
         <action
             android:id="@+id/action_botFlopEntryFragment_to_cardSelectionFragment"
-            app:destination="@id/cardSelectionFragment" />
+            app:destination="@id/cardSelectionFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/botResultsFragment"
@@ -63,7 +91,11 @@
         tools:layout="@layout/fragment_bot_results" >
         <action
             android:id="@+id/action_botResultsFragment_to_botFlopEntryFragment"
-            app:destination="@id/botFlopEntryFragment" />
+            app:destination="@id/botFlopEntryFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/calculatorFlopEntryFragment"
@@ -72,7 +104,11 @@
         tools:layout="@layout/fragment_calculator_flop_entry" >
         <action
             android:id="@+id/action_calculatorFlopEntryFragment_to_cardSelectionFragment"
-            app:destination="@id/cardSelectionFragment" />
+            app:destination="@id/cardSelectionFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/calculatorResultsFragment"
@@ -81,7 +117,11 @@
         tools:layout="@layout/fragment_calculator_results" >
         <action
             android:id="@+id/action_calculatorResultsFragment_to_calculatorFlopEntryFragment"
-            app:destination="@id/calculatorFlopEntryFragment" />
+            app:destination="@id/calculatorFlopEntryFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/helpFragment"
